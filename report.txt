@@ -1,0 +1,63 @@
+======================================================================
+AUTONOMOUS FINANCIAL RESEARCH AGENT - ATMOS 2026 | Track C
+======================================================================
+*** SYNTHETIC DEMO DATA - NOT A REAL FINDING ***
+
+YoY revenue decomposition (volume + realisation = 100% of revenue change):
++-----------+-------------+------------------+-------------------+------------------------+-----------------------------+
+| quarter   |   asp_lakhs |   volume_yoy_pct |   pct_from_volume |   pct_from_realisation |   channel_gap_pct_of_retail |
+|-----------+-------------+------------------+-------------------+------------------------+-----------------------------|
+| Q1FY26    |        9.95 |             7.11 |             40.10 |                  59.90 |                        9.50 |
+| Q2FY26    |        9.93 |             5.42 |             30.01 |                  69.99 |                       12.15 |
+| Q3FY26    |       10.32 |             4.88 |             24.19 |                  75.81 |                       12.41 |
+| Q4FY26    |       10.73 |             4.77 |             24.64 |                  75.36 |                       12.08 |
++-----------+-------------+------------------+-------------------+------------------------+-----------------------------+
+
+Audit: {'quarters_used': ['Q1FY26', 'Q2FY26', 'Q3FY26', 'Q4FY26'], 'avg_realisation_share_pct': 70.3, 'avg_volume_share_pct': 29.7, 'avg_volume_yoy_pct': 5.5, 'cumulative_channel_gap_units': 92000, 'channel_gap_is_export_adjusted': False, 'channel_gap_note': 'Proxy only: Vahan registration lags/category mismatches are not corrected.'}
+Falsification: {'condition': 'Volume effect >= 50% of YoY revenue growth in each of the latest 2 growing quarters', 'status': 'THESIS_SURVIVES', 'evidence': [{'quarter': 'Q3FY26', 'volume_share_pct': 24.2}, {'quarter': 'Q4FY26', 'volume_share_pct': 24.6}]}
+[!] Channel gap is NOT export-adjusted; treat as indicative only.
+
+[+] A: narrative extraction
+    transient error (ServerError); retrying in 5s (attempt 1/6)
+    transient error (ServerError); retrying in 10s (attempt 2/6)
+[+] B: adversarial critique
+[+] C: report
+    transient error (ServerError); retrying in 5s (attempt 1/6)
+    transient error (ServerError); retrying in 10s (attempt 2/6)
+    transient error (ServerError); retrying in 20s (attempt 3/6)
+    transient error (ServerError); retrying in 40s (attempt 4/6)
+======================================================================
+**NOTICE: THIS RUN USES SYNTHETIC DEMO DATA. ALL DATA AND CLAIMS ARE FOR ILLUSTRATIVE PURPOSES ONLY; NO REAL-WORLD CLAIMS ARE MADE.**
+
+**Track & prompt:** Track C - Find a company whose reported growth is driven by something different from what management emphasises.
+
+**The Discovery:**  
+Management states that demand remains strong across core SUV platforms with booking backlogs and highlights that its strategic focus is volume market-share expansion [DEMO-SYNTHETIC]. However, reported growth is predominantly driven by realization rather than volume, with realization accounting for an average of 70.3% of growth compared to a volume share of 29.7% [ENGINE].
+
+**Why it matters:**  
+A disconnect between management's narrative of volume market-share expansion and the reality of realization-led growth may signal that top-line expansion relies on pricing or mix shifts rather than broad-based volume adoption [DEMO-SYNTHETIC], [ENGINE]. Additionally, an unadjusted cumulative channel gap of 92,000 units suggests potential inventory build-up or retail registration divergence [ENGINE].
+
+**Evidence trail:**  
+- Management communicates that booking backlogs remain intact and emphasizes volume market-share expansion across core platforms [DEMO-SYNTHETIC].  
+- Quantitative decomposition across Q1FY26, Q2FY26, Q3FY26, and Q4FY26 shows that average realization share of growth is 70.3%, whereas average volume share is 29.7% [ENGINE].  
+- Average volume YoY growth stands at 5.5% [ENGINE].  
+- A cumulative channel gap of 92,000 units is recorded across the period [ENGINE].
+
+**Numbers:**  
+- Quarters used: Q1FY26, Q2FY26, Q3FY26, Q4FY26 [ENGINE]  
+- Average realisation share: 70.3% [ENGINE]  
+- Average volume share: 29.7% [ENGINE]  
+- Average volume YoY: 5.5% [ENGINE]  
+- Cumulative channel gap: 92,000 units (Export-adjusted: false; Note: Proxy only: Vahan registration lags/category mismatches are not corrected) [ENGINE]  
+- Peer metrics: None available [ENGINE]
+
+**Counterargument:**  
+The high realization share (averaging 70.3%) may reflect a deliberate product mix shift toward premium variants or necessary cost pass-through rather than pricing over volume weakness, especially since volume growth remains positive at an average of 5.5% YoY [ENGINE]. Furthermore, no peer data is available to assess whether the realization-driven growth pattern is sector-wide [ENGINE]. Additional data needed to evaluate this counterargument includes model-level sales mix and ASP breakdowns, raw material cost trends/gross margin bridges, and export-adjusted retail registration and dealer inventory figures [ENGINE].
+
+**Falsification condition:**  
+- Condition: Volume effect >= 50% of YoY revenue growth in each of the latest 2 growing quarters [ENGINE].  
+- Coded result: THESIS_SURVIVES (Evidence: Q3FY26 volume share was 24.2%; Q4FY26 volume share was 24.6%) [ENGINE].
+
+**Evidence strength:**  
+Low (No peer data is available to contextualize performance, and the cumulative channel gap is not export-adjusted [ENGINE]).
+======================================================================
